@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #abc;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*,
+h1,
+h6,
+button {
+  font-family: "Nunito", sans-serif;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+section {
+  width: 45rem;
+  padding: 1em;
+  margin: 1em auto;
+  overflow: auto;
+  background-color: #fff;
+  box-shadow: 0px 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.list {
+  clear: both;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0.85em 2.25em 0.85em 1em;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  h6 {
+    margin-bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  input {
+    background: #f2f2f2;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.15);
+
+    input {
+      background: #e5e5e5;
+    }
+  }
+
+  &--completed {
+    text-decoration: line-through;
+    background-color: rgba(0, 128, 0, 0.15);
+    border-color: rgba(0, 128, 0, 0.2);
+
+    input {
+      background: #d9ecd9;
+    }
+  }
+
+  &--completed:hover {
+    background-color: rgba(0, 128, 0, 0.25);
+    border-color: rgba(0, 128, 0, 0.3);
+
+    input {
+      background: #bfdfbf;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.action {
+  margin: 0;
+}
+
+.action i {
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 692px) {
+  section {
+    width: 25rem;
+  }
+}
