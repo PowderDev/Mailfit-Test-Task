@@ -3,7 +3,7 @@
 ## To start the app on your local machine
 
 - Create a firebase web app
-- Create a .env file with all the firebase data
+- Put all the firebase web app data into firebaseConfig at firebase/index.ts
 
 ```
 yarn install
